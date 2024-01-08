@@ -1,8 +1,8 @@
 <?php
 session_start();
-// Destroy session
+// Закрыть сессию
 if (session_destroy()) {
-    // Redirecting To Home Page
+    // Перенаправление на вход
     header("Location: login.php");
 }
 ?>

@@ -16,8 +16,6 @@
   <h1 class="mainText">Для управления базой данных зайдите в аккаунт!</h1>
 
   <div class="autorizationWindow">
-    <!-- <input placeholder="Введите логин" type="text" class="login" />
-    <input placeholder="Введите пароль" type="text" class="login" /> -->
     <div><a href="/pages/registration.php">Перейти на страницу регистрации</a></div>
   </div>
 </body>
