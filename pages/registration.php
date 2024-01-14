@@ -20,6 +20,7 @@
         $password = stripslashes($_REQUEST['password']);
         $password = mysqli_real_escape_string($con, $password);
         $create_datetime = date("Y-m-d H:i:s");
+        // Превращаем пароль в ХЭШ для дальнейшей передачи в базу данных и обеспечения безопасности хранения
         $query = "INSERT into `users` (username, password, email, create_datetime)
                      VALUES ('$username', '" . md5($password) . "', '$email', '$create_datetime')";
         $result = mysqli_query($con, $query);
@@ -31,7 +32,7 @@
         } else {
             echo "<div class='form'>
                   <h3>Рекомендуемые поля пропущены!</h3><br/>
-                  <p class='link'>Нажмите для<a href='registration.php'>регистрации</a> again.</p>
+                  <p class='link'>Нажмите для<a href='registration.php'>регистрации</a></p>
                   </div>";
         }
     } else {
